@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h1>{{ title }}</h1>
+<h2>{{ table_title }}</h2>
+<table border='1'>
+    <th>CWID</th>
+    <th>Name</th>
+    <th>Department</th>
+    <th>Course</th>
+    <th>Number of Students</th>
+    {% for row in rows %}
+        <tr>
+            <td>{{ row.cwid }}</td>
+            <td>{{ row.name }}</td>
+            <td>{{ row.dept }}</td>
+            <td>{{ row.course }}</td>
+            <td>{{ row.count }}</td>
+        </tr>       
+    {% endfor %}
+</table>
+{% endblock %}

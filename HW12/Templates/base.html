@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    {% block body %}
+    <table>
+        {% for item in sequence %}
+            <tr>
+                <td>{{ item }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    {% endblock %}
+</body>
+</html>
